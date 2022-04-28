@@ -7,7 +7,7 @@ print('Решение задания №5')
 def get_jokes(a, doubles=False):
     """
     :param a: input numbers of jokes (1-5)
-    :param doubles: use words in joke twice or not (Default=False, change on "True" for Eunice)
+    :param doubles: use words in joke twice or not (Default=False, change on "True" for unique)
     :return: return list of jokes
     """
     nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
