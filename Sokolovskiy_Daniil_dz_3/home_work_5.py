@@ -4,10 +4,10 @@ import random
 print('Решение задания №5')
 
 
-def get_jokes(a, doubles=False):
+def get_jokes(number_joke, doubles=False):
     """
-    :param a: input numbers of jokes (1-5)
-    :param doubles: use words in joke twice or not (Default=False, change on "True" for unique)
+    :param number_joke:
+    :param doubles: use words in joke twice or not (Default=False, change on "True" for use doubles)
     :return: return list of jokes
     """
     nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
@@ -17,15 +17,15 @@ def get_jokes(a, doubles=False):
     joke_list = []
     count = 0
 
-    if a > len(nouns):
-        a = len(nouns)
-    elif 0 <= a <= len(nouns):
-        a = a
+    if number_joke > len(nouns):
+        number_joke = len(nouns)
+    elif 0 <= number_joke <= len(nouns):
+        number_joke = number_joke
     else:
-        a = 0
-        print('Зачем тебе шутки? Ты сам шутник, если указываешь отрицательные значения:D')
+        number_joke = 0
+        print('Первым аргументом функции, нужно ввести положительное значение от 1 до 5')
 
-    while count != a:
+    while count != number_joke:
         i = len(nouns) - 1
         if not doubles:
             joke_list.append(f'{nouns.pop(int(random.randint(0, i)))}, '
