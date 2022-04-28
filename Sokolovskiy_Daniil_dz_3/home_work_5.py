@@ -17,13 +17,19 @@ def get_jokes(number_joke, doubles=False):
     joke_list = []
     count = 0
 
-    if number_joke > len(nouns):
-        number_joke = len(nouns)
-    elif 0 <= number_joke <= len(nouns):
-        number_joke = number_joke
-    else:
-        number_joke = 0
-        print('Первым аргументом функции, нужно ввести положительное значение от 1 до 5')
+    if not doubles:
+        if number_joke > len(nouns):
+            number_joke = len(nouns)
+        elif 0 <= number_joke <= len(nouns):
+            number_joke = number_joke
+        else:
+            number_joke = 0
+            print('Первым аргументом функции, нужно ввести положительное значение от 1 до 5')
+
+    if doubles:
+        if number_joke < 0:
+            number_joke = 0
+            print('Первым аргументом функции, нужно ввести положительное значение от 1 до 5')
 
     while count != number_joke:
         i = len(nouns) - 1
@@ -42,4 +48,4 @@ def get_jokes(number_joke, doubles=False):
     print(joke_list)
 
 
-get_jokes(10, doubles=True)
+get_jokes(30, doubles=True)

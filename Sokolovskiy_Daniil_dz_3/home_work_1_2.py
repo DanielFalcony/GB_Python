@@ -52,9 +52,12 @@ def num_translate_adv(number):
     }
 
     if number.istitle():
-        print((numbers.get(number.lower(), None)).title())
+        if numbers.get(number.lower()):
+            print(numbers.get(number.lower()).title())
+        else:
+            print(None)
     else:
         print(numbers.get(number.lower(), None))
 
 
-num_translate_adv(number=input('Введите число прописью по английски от 0 до 10: '))
+num_translate_adv(input('Введите число прописью по английски от 0 до 10: '))
