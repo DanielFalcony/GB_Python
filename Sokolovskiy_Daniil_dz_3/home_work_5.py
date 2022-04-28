@@ -1,5 +1,6 @@
 import random
 
+
 print('Решение задания №5')
 
 
@@ -18,6 +19,11 @@ def get_jokes(a, doubles=False):
 
     if a > len(nouns):
         a = len(nouns)
+    elif 0 <= a <= len(nouns):
+        a = a
+    else:
+        a = 0
+        print('Зачем тебе шутки? Ты сам шутник, если указываешь отрицательные значения:D')
 
     while count != a:
         i = len(nouns) - 1
@@ -36,4 +42,4 @@ def get_jokes(a, doubles=False):
     print(joke_list)
 
 
-get_jokes(2, doubles=True)
+get_jokes(10, doubles=True)
