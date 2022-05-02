@@ -3,7 +3,10 @@ from datetime import datetime
 
 
 def currency_rates(value):
-
+    """
+    :param value: function taken currency in str type (eur, usd and etc.)
+    :return: The current exchange rate on the date of the Central Bank
+    """
     value = value.upper()
     response = requests.get('http://www.cbr.ru/scripts/XML_daily.asp')
     url_info = str(response.content)
