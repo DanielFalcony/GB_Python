@@ -3,7 +3,7 @@ print('Решение задачи №4')
 src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 
 
-def src_func(my_list):  # Можно было реализовать без функции, но для перспективного удобства, так предпочтительней.
+def src_bigger(my_list):  # Можно было реализовать без функции, но для перспективного удобства, так предпочтительней.
     """
     :param my_list: Taken list, with 'int' type of value
     :return: A list with values greater than the previous one
@@ -12,4 +12,4 @@ def src_func(my_list):  # Можно было реализовать без фу
     return result
 
 
-print(src_func(src))
+print(src_bigger(src))
