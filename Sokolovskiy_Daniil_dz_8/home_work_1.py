@@ -1,5 +1,7 @@
 import re
 
+print('Решение задания №1')
+
 
 def email_parse(text):
     try:

@@ -1,6 +1,8 @@
 import re
 import requests
 
+print('Решение задания №2')
+
 url_text = requests.get(
     'https://raw.githubusercontent.com/elastic/examples/master/Common%20Data%20Formats/nginx_logs/nginx_logs')
 
