@@ -27,27 +27,30 @@ class Warehouse:
     def logistic(self):
         while True:
             try:
-                choice = input(f'Выберите номер устройства или введи "q" что бы закончить:'
+                choice = input(f'{"*" * 70}\n'
+                               f'Выберите номер устройства или введи "q" что бы закончить:'
                                f'\n1 : {p}'
                                f'\n2 : {s}'
                                f'\n3 : {x}'
                                f'\n------>: ')
                 if choice != 'q':
                     if choice.isdigit() and 0 < int(choice) <= 3:
-                        count = input(f'Введите кол-во товара шт.: ')
+                        count = input(f'{"*" * 70}\n'
+                                      f'Введите кол-во товара шт.:'
+                                      f'\n------>: ')
                         if count.isdigit():
-                            department = input('Введите в какой департамент отправляем: ')
+                            department = input(f'{"*" * 70}\nВведите в какой департамент отправляем:\n------>: ')
                         else:
-                            print('Количество необходимо ввести целым числом!')
+                            print(f'{"*" * 70}\nКоличество необходимо ввести целым числом!\n{"*" * 70}\n')
                             return Warehouse.logistic(ware)
                     else:
-                        print('Вы ввели неверное значение!')
+                        print(f'{"*" * 70}\nВы ввели неверное значение!\n{"*" * 70}\n')
                         return Warehouse.logistic(ware)
                 if choice == '1':
                     uniqe = {'Устройство': p.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list = uniqe
                     self.my_warehouse.append(self.my_list)
-                    print(f'На складе для передачи:\n {self.my_warehouse}')
+                    print(f'{"*" * 70}\nНа складе для передачи:\n {self.my_warehouse}\n{"*" * 70}\n')
                 elif choice == '2':
                     uniqe = {'Устройство': s.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list = uniqe
@@ -59,13 +62,13 @@ class Warehouse:
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
                 elif choice.lower() == 'q':
-                    print('Пополнение склада закончено')
+                    print(f'{"*" * 70}\nПополнение склада закончено\n{"*" * 70}')
                     break
                 else:
-                    raise OwnError('Введено неверное значение!')
+                    raise OwnError(f'{"*" * 70}\nВведено неверное значение!\n{"*" * 70}\n')
             except OwnError as err:
                 print(err)
-        return f'На складе хранится: {self.my_warehouse}'
+        return f'{"*" * 70}\nНа складе хранится: {self.my_warehouse}\n{"*" * 70}\n'
 
 
 class OwnError(ValueError):
