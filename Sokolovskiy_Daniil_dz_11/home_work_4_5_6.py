@@ -25,6 +25,8 @@ class Warehouse:
 
     # @classmethod
     def logistic(self):
+        count = None
+        department = None
         while True:
             try:
                 choice = input(f'{"*" * 70}\n'
@@ -55,14 +57,14 @@ class Warehouse:
                     uniqe = {'Устройство': s.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list = uniqe
                     self.my_warehouse.append(self.my_list)
-                    print(f'На складе для передачи:\n {self.my_warehouse}')
+                    print(f'{"*" * 70}\nНа складе для передачи:\n {self.my_warehouse}\n{"*" * 70}\n')
                 elif choice == '3':
                     uniqe = {'Устройство': x.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list = uniqe
                     self.my_warehouse.append(self.my_list)
-                    print(f'На складе для передачи:\n {self.my_warehouse}')
+                    print(f'{"*" * 70}\nНа складе для передачи:\n {self.my_warehouse}\n{"*" * 70}\n')
                 elif choice.lower() == 'q':
-                    print(f'{"*" * 70}\nПополнение склада закончено\n{"*" * 70}')
+                    print(f'{"*" * 70}\nПополнение склада закончено\n{"*" * 70}\n')
                     break
                 else:
                     raise OwnError(f'{"*" * 70}\nВведено неверное значение!\n{"*" * 70}\n')
