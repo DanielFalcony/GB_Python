@@ -31,7 +31,7 @@ class Warehouse:
                                f'\n1 : {p}'
                                f'\n2 : {s}'
                                f'\n3 : {x}'
-                               f'\nВведите значение:')
+                               f'\n------>: ')
                 if choice != 'q':
                     if choice.isdigit() and 0 < int(choice) <= 3:
                         count = input(f'Введите кол-во товара шт.: ')
@@ -45,17 +45,17 @@ class Warehouse:
                         return Warehouse.logistic(ware)
                 if choice == '1':
                     uniqe = {'Устройство': p.__str__(), 'Кол-во': count, 'Департамент': department}
-                    self.my_list.update(uniqe)
+                    self.my_list = uniqe
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
                 elif choice == '2':
                     uniqe = {'Устройство': s.__str__(), 'Кол-во': count, 'Департамент': department}
-                    self.my_list.update(uniqe)
+                    self.my_list = uniqe
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
                 elif choice == '3':
                     uniqe = {'Устройство': x.__str__(), 'Кол-во': count, 'Департамент': department}
-                    self.my_list.update(uniqe)
+                    self.my_list = uniqe
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
                 elif choice.lower() == 'q':
