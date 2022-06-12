@@ -23,10 +23,6 @@ class Warehouse:
         self.my_warehouse = []
         self.my_list = {}
 
-
-    # def __str__(self):
-    #     return f'{self.type_off} Кол-во {self.count} Департамент {self.depart}'
-
     # @classmethod
     def logistic(self):
         while True:
@@ -44,19 +40,16 @@ class Warehouse:
                     self.my_list.update(uniqe)
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
-                    print(f'В моем листе:\n {self.my_list}')
                 elif choice == '2':
                     uniqe = {'Устройство': s.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list.update(uniqe)
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
-                    print(f'В моем листе:\n {self.my_list}')
                 elif choice == '3':
                     uniqe = {'Устройство': x.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list.update(uniqe)
                     self.my_warehouse.append(self.my_list)
                     print(f'На складе для передачи:\n {self.my_warehouse}')
-                    print(f'В моем листе:\n {self.my_list}')
                 elif choice.lower() == 'q':
                     print('Пополнение склада закончено')
                     break
@@ -65,7 +58,6 @@ class Warehouse:
             except OwnError as err:
                 print(err)
         return f'На складе хранится: {self.my_warehouse}'
-
 
 
 class OwnError(ValueError):
