@@ -33,8 +33,16 @@ class Warehouse:
                                f'\n3 : {x}'
                                f'\nВведите значение:')
                 if choice != 'q':
-                    count = input(f'Введите кол-во товара шт.: ')
-                    department = input('Введите в какой департамент отправляем: ')
+                    if choice.isdigit() and 0 < int(choice) <= 3:
+                        count = input(f'Введите кол-во товара шт.: ')
+                        if count.isdigit():
+                            department = input('Введите в какой департамент отправляем: ')
+                        else:
+                            print('Количество необходимо ввести целым числом!')
+                            return Warehouse.logistic(ware)
+                    else:
+                        print('Вы ввели неверное значение!')
+                        return Warehouse.logistic(ware)
                 if choice == '1':
                     uniqe = {'Устройство': p.__str__(), 'Кол-во': count, 'Департамент': department}
                     self.my_list.update(uniqe)
