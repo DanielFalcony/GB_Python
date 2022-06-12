@@ -16,10 +16,7 @@ print('Решение задачи №4, №5, №6')
 
 
 class Warehouse:
-    def __init__(self, type_off, count, depart):
-        self.type_off = type_off
-        self.count = count
-        self.depart = depart
+    def __init__(self):
         self.my_warehouse = []
         self.my_list = {}
 
@@ -116,5 +113,5 @@ print(o)
 print(p)
 print(s)
 print(x)
-ware = Warehouse(o, 10, 'market')
+ware = Warehouse()
 print(Warehouse.logistic(ware))
