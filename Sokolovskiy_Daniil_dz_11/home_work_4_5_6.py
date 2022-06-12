@@ -30,12 +30,12 @@ class Warehouse:
         while True:
             try:
                 choice = input(f'{"*" * 70}\n'
-                               f'Выберите номер устройства или введи "q" что бы закончить:'
+                               f'Введите порядковый номер устройства или введи "Q" что бы закончить наполнение склада:'
                                f'\n1 : {p}'
                                f'\n2 : {s}'
                                f'\n3 : {x}'
                                f'\n------>: ')
-                if choice != 'q':
+                if choice.lower() != 'q':
                     if choice.isdigit() and 0 < int(choice) <= 3:
                         count = input(f'{"*" * 70}\n'
                                       f'Введите кол-во товара шт.:'
