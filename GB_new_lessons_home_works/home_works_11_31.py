@@ -104,3 +104,19 @@
 # new_list = [1, 2, 3, 4, 5, 6, 7, 8]
 # n = len(new_list)
 # print(randomize(new_list, n))
+
+# 19) Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел
+from random import choice
+
+
+def generate(start=0, end=999999):
+    sheet_list = []
+    for v in range(start, end):
+        sheet_list.append(v)
+    result = choice(sheet_list)
+    return result
+
+
+print(generate())
+
+# 20) Определить, присутствует ли в заданном списке строк, некоторое число
