@@ -88,7 +88,6 @@
 # 16) -Задать список из n чисел последовательности (1+1n)n и вывести на экран их сумму
 
 
-
 # 17) -Задать список из N элементов, заполненных числами из [-N, N]. Найти произведение элементов на указанных позициях.
 # Позиции хранятся в файле file.txt в одной строке одно число
 
@@ -108,17 +107,82 @@
 # print(randomize(new_list, n))
 
 # 19) Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел
-from random import choice
-
-
-def generate(start=0, end=999999):
-    sheet_list = []
-    for v in range(start, end):
-        sheet_list.append(v)
-    result = choice(sheet_list)
-    return result
-
-
-print(generate())
+# from random import choice
+#
+#
+# def generate(start=0, end=999999):
+#     sheet_list = []
+#     for v in range(start, end):
+#         sheet_list.append(v)
+#     result = choice(sheet_list)
+#     return result
+#
+#
+# print(generate())
 
 # 20) Определить, присутствует ли в заданном списке строк, некоторое число
+
+# def search(args, val):
+#     for i in args:
+#         if val in i:
+#             return True
+#     return False
+#
+#
+# list_new = ['abw', '213', 'bbe', 'ler3at']
+# val = '2'
+#
+# print(search(list_new, val))
+
+# 21) Определить, позицию второго вхождения строки в списке либо сообщить, что её нет.
+# Примеры
+# список: ["qwe", "asd", "zxc", "qwe", "ertqwe"], ищем: "qwe", ответ: 3
+# список: ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"], ищем: "йцу", ответ: 5
+# список: ["йцу", "фыв", "ячс", "цук", "йцукен"], ищем: "йцу", ответ: -1
+# список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
+# список: [], ищем: "123", ответ: -1
+
+# def search(args, val):
+#     count = 0
+#     for i in range(len(args)):
+#         if val == args[i]:
+#             count += 1
+#         if count == 2:
+#             return i
+#     return False
+#
+#
+# list_new = ['abw', '213', 'bbe', '213', 'ler3at']
+# val = '213'
+#
+# print(search(list_new, val))
+
+# 22) Найти сумму чисел списка стоящих на нечетной позиции
+
+# 26) Дано число. Составить список чисел Фибоначчи, в том числе для отрицательных индексов.
+#  Т е для k = 8, список будет выглядеть так:
+#  [-21 ,13, -8, 5, −3,  2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] Негафибоначчи
+
+def fibo(n):
+    fib1 = 1
+    fib2 = 1
+    i = 0
+    while i < n - 2:
+        fib_sum = fib1 + fib2
+        print(fib_sum)
+        fib1 = fib2
+        fib2 = fib_sum
+        i = i + 1
+
+
+
+
+# def fibo(val):
+#     my_list = []
+#     while val > 0:
+#         if val in (1, 2):
+#             my_list.append(fibo(val - 1) + fibo(val - 2))
+#     return my_list
+
+
+print(fibo(5))
