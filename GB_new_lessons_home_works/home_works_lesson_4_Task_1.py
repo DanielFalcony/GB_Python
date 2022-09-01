@@ -17,8 +17,16 @@ def simple_multiplier(i):
         elif n % 3 == 0:
             multi_list.append(n // 3)
             n = n // 3
+        elif n % 5 == 0:
+            multi_list.append(n // 5)
+            n = n // 5
+        elif n % 7 == 0:
+            multi_list.append(n // 7)
+            n = n // 7
+        elif n % 9 == 0:
+            multi_list.append(n // 9)
+            n = n // 9
         else:
-            multi_list.append(n // n)
             n = n // n
 
     return print(f'простые множители числа {i} это {multi_list}')
