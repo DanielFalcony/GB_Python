@@ -1,29 +1,18 @@
 """
-Task 31
+Task 32
 
-Составить список простых множителей натурального числа N
-
+Дана последовательность чисел. Получить список неповторяющихся элементов исходной последовательности
+Пример: [1, 2, 3, 5, 1, 5, 3, 10] => [1, 2, 3, 5, 10]
 
 """
 
 
-def simple_multiplier(i):
-    n = i
-    multi_list = [n]
-    while n != 1:
-        if n % 2 == 0:
-            multi_list.append(n // 2)
-            n = n // 2
-        elif n % 3 == 0:
-            multi_list.append(n // 3)
-            n = n // 3
-        else:
-            multi_list.append(n // n)
-            n = n // n
+def sing_num_list(i):
+    result = list(set(i[:]))
 
-    return print(f'простые множители числа {i} это {multi_list}')
+    return f'Уникальные значения {result}\nCписка: {i}'
 
 
-number = int(input('Введите число: '))
+number_list = [1, 5, 3, 5, 8, 7, 6, 4, 6, 12, 20, 3]
 
-print(simple_multiplier(number))
+print(sing_num_list(number_list))
