@@ -1,5 +1,5 @@
 """
-Task 34
+Task 33
 
 Задана натуральная степень k. Сформировать случайным образом список коэффициентов (значения от 0 до 100)
 многочлена и записать в файл многочлен степени k. *Пример: k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
@@ -33,7 +33,7 @@ ratios = get_ratios(k)
 polynom1 = get_polynomial(k, ratios)
 print(polynom1)
 
-with open('33_Polynomial.txt', 'w') as data:
+with open('HW_33_Polynomial.txt', 'w') as data:
     data.write(polynom1)
 
 # Второй многочлен для следующей задачи:
@@ -44,5 +44,5 @@ ratios = get_ratios(k)
 polynom2 = get_polynomial(k, ratios)
 print(polynom2)
 
-with open('33_Polynomial2.txt', 'w') as data:
+with open('HW_33_Polynomial2.txt', 'w') as data:
     data.write(polynom2)
