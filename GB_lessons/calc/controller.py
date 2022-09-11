@@ -1,5 +1,5 @@
 import view
-import model_multi as model
+import model_minus as model
 
 
 def button_click():
