@@ -1,0 +1,4 @@
+15.09.2022 10:39:12 AM -- DEBUG:This is O my goodes DEBUG data
+15.09.2022 10:39:12 AM -- INFO:This is INFO data
+15.09.2022 10:39:12 AM -- WARNING:This is WARNING data
+15.09.2022 10:39:12 AM -- ERROR:And non-ASCII stuff, too, like Øresund and Malmö
